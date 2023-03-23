@@ -1,0 +1,127 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    min-height: 100px;
+    width: 100%;
+background-position:center;
+background-size: cover;
+background-color: black;
+position: absolute;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav{
+    position: absolute;
+    display: flex;
+    padding: 2% 5%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav img{
+    width: 150px;
+}
+
+.nav-links{
+    flex:1;
+    text-align: right;
+}
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8 px 20 px; 
+    position: relative; 
+}
+
+.nav-links ul li a{
+color:#fff;
+text-decoration: none;
+text-transform: uppercase;
+font-size: 13px;
+}
+
+.nav-links ul li::after {
+    content: ""; 
+    width: 0%;
+    background: red;
+    height: 2px; 
+    display: block;
+    margin: auto;
+    transition: 1.0s;
+
+}
+
+.nav-links ul li:hover::after
+{
+    width: 100%;
+}
+
+.text-box{
+    width: 100%;
+    top: 100%; 
+    left:50%; 
+    position: absolute;
+    background-image: linear-gradient(rgba(121, 4, 113, 0.709),
+    rgba(146, 46, 213, 0.7)),
+    url(images/banner.png);
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.text-box h1{
+    font-size: 62px;
+    color: #fff;
+    text-align: center;
+    font-family: Roboto, bold;
+
+}
+
+
+.text-box p{
+    margin: 10 px; 
+    font-size: 24 px; 
+    color: #fff;
+}
+
+.button {
+    border: none;
+    color: rgb(122, 64, 64);
+    padding: 30px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+.button:hover{
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* responsive design */
+@media (max-width: 700px){
+    .text-box h1 {
+    font-size: 20 px;
+
+}
+.nav-links ul li {
+    display: block; 
+}
+
+.nav-links{
+    position: fixed;
+    background: red;
+    height: 100vh;
+    width: 200px; 
+    top: 0;
+    right: -200px;
+    text-align: left; 
+    z-index: 2;
+}
+}
