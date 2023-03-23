@@ -1,5 +1,6 @@
 let menu = document.getElementById("navLinks"); 
 
+
 function showMenu ()
 {
     menu.style.right="0"; 
